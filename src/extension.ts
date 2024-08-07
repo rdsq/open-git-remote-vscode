@@ -13,7 +13,7 @@ export type Remote = {
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
-		vscode.commands.registerCommand('open-git-remote.open-git-remote', async () => {
+		vscode.commands.registerCommand('literal-open-git-remote.open-git-remote', async () => {
 			/** Structure: [repoName, name, url] */
 			const remotes: [string, string, string][] = [];
 			let reposCount = 0;

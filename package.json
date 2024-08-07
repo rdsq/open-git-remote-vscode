@@ -1,5 +1,5 @@
 {
-  "name": "open-git-remote",
+  "name": "literal-open-git-remote",
   "displayName": "Open Git Remote",
   "description": "Exactly what it says - just open a git repository's remote in the browser",
   "version": "1.0.0",
@@ -16,7 +16,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "open-git-remote.open-git-remote",
+        "command": "literal-open-git-remote.open-git-remote",
         "title": "Open Git Remote"
       }
     ]
