@@ -44,7 +44,10 @@ export function activate(context: vscode.ExtensionContext) {
 				// remote   repo = url
 			}
 			const choice = await vscode.window.showQuickPick(
-				Object.keys(mappedRemotes)
+				Object.keys(mappedRemotes),
+				{
+					placeHolder: 'Remote to open'
+				}
 			);
 			if (!choice) {
 				return;

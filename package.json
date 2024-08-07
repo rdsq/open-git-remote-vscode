@@ -2,7 +2,7 @@
   "name": "open-git-remote",
   "displayName": "Open Git Remote",
   "description": "Exactly what it says - just open a git repository's remote in the browser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.92.0"
   },
