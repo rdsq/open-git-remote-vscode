@@ -34,25 +34,30 @@ export function activate(context: vscode.ExtensionContext) {
 				vscode.window.showErrorMessage('This project has no remotes');
 				return;
 			}
-			const mappedRemotes: { [key: string]: string } = {};
-			for (const remote of remotes) {
-				let str = remote[1];
-				if (reposCount > 1) {
-					str += '   ' + remote[0];
+			let url: string;
+			if (remotes.length === 1) {
+				url = remotes[0][2];
+			} else {
+				const mappedRemotes: { [key: string]: string } = {};
+				for (const remote of remotes) {
+					let str = remote[1];
+					if (reposCount > 1) {
+						str += '   ' + remote[0];
+					}
+					mappedRemotes[str] = remote[2];
+					// remote   repo = url
 				}
-				mappedRemotes[str] = remote[2];
-				// remote   repo = url
-			}
-			const choice = await vscode.window.showQuickPick(
-				Object.keys(mappedRemotes),
-				{
-					placeHolder: 'Remote to open'
+				const choice = await vscode.window.showQuickPick(
+					Object.keys(mappedRemotes),
+					{
+						placeHolder: 'Remote to open'
+					}
+				);
+				if (!choice) {
+					return;
 				}
-			);
-			if (!choice) {
-				return;
+				url = mappedRemotes[choice];
 			}
-			const url = mappedRemotes[choice];
 			await vscode.env.openExternal(vscode.Uri.parse(url));
 		})
 	);

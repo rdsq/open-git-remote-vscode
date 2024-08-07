@@ -2,7 +2,7 @@
   "name": "literal-open-git-remote",
   "displayName": "Open Git Remote",
   "description": "Exactly what it says - just open a git repository's remote in the browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "rdsq",
   "icon": "./icon.png",
   "engines": {
