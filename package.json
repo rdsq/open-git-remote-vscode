@@ -4,6 +4,7 @@
   "description": "Exactly what it says - just open a git repository's remote in the browser",
   "version": "1.0.0",
   "publisher": "rdsq",
+  "icon": "./icon.jpg",
   "engines": {
     "vscode": "^1.92.0"
   },
