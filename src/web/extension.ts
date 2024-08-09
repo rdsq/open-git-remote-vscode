@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { GitExtension } from './git';
+import type { GitExtension } from './git.d.ts';
 
 const gitExtension = vscode.extensions.getExtension<GitExtension>('vscode.git')!.exports;
 const git = gitExtension.getAPI(1);
@@ -12,6 +12,7 @@ export type Remote = {
 };
 
 export function activate(context: vscode.ExtensionContext) {
+	console.log(111111111111);
 	context.subscriptions.push(
 		vscode.commands.registerCommand('literal-open-git-remote.open-git-remote', async () => {
 			/** Structure: [repoName, name, url] */
