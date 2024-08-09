@@ -5,6 +5,10 @@
   "version": "1.0.1",
   "publisher": "rdsq",
   "icon": "./icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdsq/open-git-remote"
+  },
   "engines": {
     "vscode": "^1.92.0"
   },
