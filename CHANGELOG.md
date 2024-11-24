@@ -4,7 +4,7 @@ All notable changes to the "open-git-remote" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## v1.1.0 ???
+## v1.1.0 2024-11-24
 
 - Added [README](./README.md)
 - Added Repository field in `package.json`
